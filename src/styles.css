@@ -1,0 +1,127 @@
+body {
+  font-family: sans-serif;
+  background-color: grey;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ############# Styles for game board ################ */
+#board {
+  height: 97.5vh;
+  width: 100vw;
+  background: #0c0f12;
+  border: green solid 5px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#game-name {
+  display: none;
+  writing-mode: vertical-rl;
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 5px;
+}
+
+/* ############# Score Board Styles ############## */
+.score {
+  color: darkorange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+
+/* ############# Press Enter Message on board ############### */
+#message {
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: grey;
+}
+
+/* ########### Net in the middle of Board ############# */
+hr {
+  border: none;
+  border-top: 3px dashed green;
+  width: 100%;
+}
+
+/* ########## Paddle Styles i.e. Rod 1 and 2 ########## */
+.rod {
+  min-height: 3vh;
+  width: 3.5rem;
+  border-radius: 10px;
+  position: fixed;
+  background-color: crimson;
+  text-align: center;
+  padding-top: 3px;
+}
+
+#rod_1 {
+  top: calc(2vh + 8px);
+}
+#rod_2 {
+  left: auto;
+  bottom: calc(2vh + 8px);
+}
+
+/* ########### Ball Styles ################ */
+#ball {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: cornsilk;
+  position: fixed;
+  align-items: center;
+}
+
+/* ####### Media Queries For handling different Screens ###### */
+@media screen and (min-width: 250px) {
+  .ball {
+    height: 25px;
+    width: 25px;
+  }
+  .rod {
+    width: 5rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .ball {
+    height: 30px;
+    width: 30px;
+  }
+  .rod {
+    width: 7rem;
+  }
+  #game-name {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .ball {
+    height: 35px;
+    width: 35px;
+  }
+  .rod {
+    width: 14vw;
+  }
+}
+
+@media screen and (min-height: 500px) {
+  #board {
+    height: 98.5vh;
+  }
+}
